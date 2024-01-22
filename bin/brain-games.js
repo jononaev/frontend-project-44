@@ -1,11 +1,18 @@
 #!/usr/bin/env node
-/*console.log("Welcome to the Brain Games!");*/
-/*console.log("May I have your name? John");*/
-/*console.log("Hello, John!");*/
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable import/no-named-as-default */
+// eslint-disable-next-line import/no-named-as-default-member
+/* eslint-disable */
+import getBirthYear, { question } from "./src/cli.js";
 
-import getBirthYear from "./src/cli.js";
-
-const user = "";
 console.log("Welcome to the Brain Games!");
-const name = getBirthYear(user);
-console.log("Hello, " + name + "!");
+const name = getBirthYear();
+console.log(`Hello, ${name}!`);
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const ask = question();
+if (ask % 2 === 0) {
+  console.log("yes");
+} else {
+  console.log("no");
+}
