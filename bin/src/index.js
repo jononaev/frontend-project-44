@@ -7,7 +7,7 @@ function general(description, getRound) {
   console.log(description);
   let i = 0;
   while (i < 3) {
-    const [question, correctAnswer, reply] = getRound();
+    const [question, correctAnswer, reply, NOD, gcd] = getRound();
     readlineSync.question(`Question: ${question}`);
     let answer = readlineSync.question("Your answer:");
     let ans = Number(answer);
